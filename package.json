@@ -2,7 +2,9 @@
   "name": "ng2-validators",
   "version": "0.0.1",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "postinstall": "typings install"
+  },
   "private": true,
   "dependencies": {
     "@angular/common": "^2.0.0",
