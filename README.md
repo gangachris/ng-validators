@@ -1,31 +1,76 @@
-# Ng2Validators
+# Ng2 Validators
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.14.
+A List Of validators for Angular 2 Forms based on [validator.js](https://github.com/chriso/validator.js)
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Usage
+## Install
+```bash
+$ npm install --save ng2-validators
+```
 
-## Code scaffolding
+## Use as Model Based Validators
+```typescript
+import { Component } from '@angular/core';
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class`.
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
-## Build
+import { isEmail } from 'ng2-validators';
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+@Component({
+  selector: 'app-root',
+  template: `
+      <form [formGroup]="theForm" novalidate>
+          <label for="name">Name</label>
+          <input type="text" class="form-control" formControlName="name">
+      </form>
+  `,
+})
+export class AppComponent {
+  theForm: FormGroup;
 
-## Running unit tests
+  constructor(private fb: FormBuilder) {
+    this.theForm = fb.group({
+      name: ['', [Validators.required, isEmail]]
+    });
+  }
+}
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Use as Directive Validator
+We need to import ng2-validators as a module in app.module.ts file, or equivalent
+```typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
-## Running end-to-end tests
+import { Ng2ValidatorsModule } from 'ng2-validators';
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/). 
-Before running the tests make sure you are serving the app via `ng serve`.
+import { AppComponent } from './app.component';
 
-## Deploying to Github Pages
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpModule,
+    Ng2ValidatorsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-Run `ng github-pages:deploy` to deploy to Github Pages.
+Then you can just use it in your template as a directive
+```html
+<input type="text" class="form-control" formControlName="name" isEmail>
+```
 
-## Further help
+## Contributing
+This module is still in development and PRs are so welcome. 
 
-To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Roadmap

@@ -2,18 +2,18 @@ import { Directive} from '@angular/core';
 import { NG_VALIDATORS, AbstractControl } from '@angular/forms';
 import * as validator from 'validator';
 
-export function validateEmail(c: AbstractControl) {
+export function isEmail(c: AbstractControl) {
   return validator.isEmail(c.value) ? null : {
-    validateEmail: {
+    isEmail: {
       valid: false
     }
   }
 }
 
 @Directive({
-  selector: '[validateEmail][formControlName],[validateEmail][formControl],[validateEmail][ngModel]',
+  selector: '[isEmail][formControlName],[isEmail][formControl],[isEmail][ngModel]',
   providers: [
-    { provide: NG_VALIDATORS, useValue: validateEmail, multi: true }
+    { provide: NG_VALIDATORS, useValue: isEmail, multi: true }
   ]
 })
 export class EmailValidator{}
