@@ -58,7 +58,7 @@ import { AppComponent } from './app.component';
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    Ng2ValidatorsModule
+    Ng2ValidatorsModule // Add angular2-validators module here
   ],
   providers: [],
   bootstrap: [AppComponent]
