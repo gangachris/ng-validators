@@ -1,11 +1,12 @@
-# Ng2 Validators
+**NOTE** Still in development
 
+# Ng2 Validators
 A List Of validators for Angular 2 Forms based on [validator.js](https://github.com/chriso/validator.js)
 
 # Usage
 ## Install
 ```bash
-$ npm install --save ng2-validators
+$ npm install --save angular2-validators
 ```
 
 ## Use as Model Based Validators
@@ -14,7 +15,7 @@ import { Component } from '@angular/core';
 
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
-import { isEmail } from 'ng2-validators';
+import { isEmail } from 'angular2-validators';
 
 @Component({
   selector: 'app-root',
@@ -37,14 +38,14 @@ export class AppComponent {
 ```
 
 ## Use as Directive Validator
-We need to import ng2-validators as a module in app.module.ts file, or equivalent
+We need to import angular2-validators as a module in app.module.ts file, or equivalent
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { Ng2ValidatorsModule } from 'ng2-validators';
+import { Ng2ValidatorsModule } from 'angular2-validators';
 
 import { AppComponent } from './app.component';
 
