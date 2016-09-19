@@ -74,4 +74,32 @@ Then you can just use it in your template as a directive
 ## Contributing
 This module is still in development and PRs are so welcome to the develop branch
 
-## Roadmap
+## Added Validators
+* isAfter
+* isAlpha
+* isAlphanumeric
+* isAscii
+* isBase64
+* isBefore
+* isBoolean
+* isByteLength
+* isCreditCard
+* isCurrency
+* isDataUri
+* isDate
+* isDecimal
+* isEmail
+* isFloat
+* isFQDN
+* isHexColor
+* isHexaDecimal
+* isInt
+* isIP
+* isISBN
+* isJSON
+* isLowerCase
+* isMacAddress
+* isNull
+* isNumeric
+* isUpperCase
+* isURL
