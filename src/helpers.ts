@@ -10,15 +10,3 @@ export function getValidator(name: string) {
     };
   }
 };
-
-export function getDirectiveName(name: string) {
-  return `[${name}][formControlName],[${name}][formControl],[${name}][ngModel]`;
-};
-
-export function getDirectiveProviders(name: string) {
-  return {
-    provide: NG_VALIDATORS,
-    useValue: getValidator(name),
-    multi: true
-  };
-};
