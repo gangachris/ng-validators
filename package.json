@@ -25,11 +25,11 @@
   "homepage": "https://github.com/gangachris/angular2-validators#readme",
   "license": "MIT",
   "dependencies": {
-    "@angular/forms": "^2.3.0",
     "@types/validator": "^5.7.35",
     "validator": "^6.2.0"
   },
   "devDependencies": {
+		"@angular/forms": "^2.3.0",
     "codelyzer": "0.0.28",
     "tslint": "^3.15.1",
     "typescript": "^2.0.2"
