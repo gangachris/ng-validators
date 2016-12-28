@@ -40,7 +40,7 @@ import { Component } from '@angular/core';
 
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
-import { Ng2Validators } from 'angular2-validators';
+import { NG2Validators } from 'angular2-validators';
 
 @Component({
   selector: 'app-root',
@@ -56,7 +56,7 @@ export class AppComponent {
 
   constructor(private fb: FormBuilder) {
     this.theForm = fb.group({
-      email: ['', [Validators.required, Ng2Validators.isEmail]]
+      email: ['', [Validators.required, NG2Validators.isEmail]]
     });
   }
 }
