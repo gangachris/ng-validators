@@ -54,7 +54,7 @@ export class AppComponent {
 
   constructor(private fb: FormBuilder) {
     this.theForm = fb.group({
-      email: ['', [Validators.required, NGValidators.isEmail]]
+      email: ['', [Validators.required, NGValidators.isEmail()]]
     });
   }
 }
