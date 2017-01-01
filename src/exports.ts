@@ -48,6 +48,3 @@ export const NGValidators  = {
   isWhiteListed: getParamValidator('isWhiteListed'),
   matches: getParamValidator('matches')
 };
-
-
-
