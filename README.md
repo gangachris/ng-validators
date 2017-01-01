@@ -1,4 +1,7 @@
 # NGValidators
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/741550036db0422bbb09c51b685fb65c)](https://www.codacy.com/app/ganga-chris/ng-validators?utm_source=github.com&utm_medium=referral&utm_content=gangachris/ng-validators&utm_campaign=badger)
+
 A List of validators for Angular (2 and above) Forms based on [validator.js](https://github.com/chriso/validator.js). Current version only works with ReactiveFormsModule.
 FormsModule Directive validators will come soon.
 
