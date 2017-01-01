@@ -38,7 +38,7 @@ import { Component } from '@angular/core';
 
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
-import { NGValidators } from 'angular2-validators';
+import { NGValidators } from 'ng-validators';
 
 @Component({
   selector: 'app-root',
