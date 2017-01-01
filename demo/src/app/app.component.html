@@ -1,0 +1,17 @@
+<div class="container" [style.margin-top.px]="30">
+  <form [formGroup]="theForm" novalidate>
+      <div class="col-md-4" [style.height.px]="200" *ngFor="let field of formData">
+        <div class="form-group">
+          <label class="form-control-label">{{field.name}}</label>
+          <input type="text" class="form-control form-control-success" [name]="field.name" [formControlName]="field.name">
+          <div class="form-control-feedback">
+            <div class="alert alert-danger" *ngIf="theForm.controls[field.name].errors && theForm.controls[field.name].errors[field.validator]">{{field.errorMessage}}</div>
+          </div>
+          <code>{{field.snippet}}</code>
+          <small class="form-text text-muted">
+            {{field.doc}}
+          </small>
+        </div>
+      </div>
+  </form>
+</div>

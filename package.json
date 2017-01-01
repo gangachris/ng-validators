@@ -1,6 +1,6 @@
 {
-  "name": "angular2-validators",
-  "version": "0.0.13",
+  "name": "ng-validators",
+  "version": "0.2.0",
   "description": "",
   "main": "",
   "module": "",
@@ -12,7 +12,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gangachris/angular2-validators"
+    "url": "git+https://github.com/gangachris/ng-validators"
   },
   "author": {
     "name": "Christopher Ganga",
@@ -20,9 +20,9 @@
     "url": "https://gangachris.com"
   },
   "bugs": {
-    "url": "https://github.com/gangachris/angular2-validators/issues"
+    "url": "https://github.com/gangachris/ng-validators/issues"
   },
-  "homepage": "https://github.com/gangachris/angular2-validators#readme",
+  "homepage": "https://github.com/gangachris/ng-validators#readme",
   "license": "MIT",
   "dependencies": {
     "@types/validator": "^5.7.35",
