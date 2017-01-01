@@ -48,4 +48,3 @@ export function getParamValidator(name: string) {
     };
   };
 }
-
