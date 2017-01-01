@@ -11,3 +11,4 @@ ng serve
 ```
 
 Visit `http://localhost:4200`
+![Demo Image](demo.png)
