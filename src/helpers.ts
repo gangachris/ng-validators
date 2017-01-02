@@ -44,7 +44,7 @@ const getValidator = (name, value, options) => {
 export function getParamValidator(name: string) {
   return (options?: any) => {
     return (c: AbstractControl) => {
-      return getValidator(name, c.value, options);
+      return getValidator(name, c.value != null ? c.value : '', options);
     };
   };
 }
